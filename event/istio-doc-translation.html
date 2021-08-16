@@ -1,0 +1,970 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Istio 官方文档翻译 · 云原生社区 Istio SIG</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="云原生社区">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-toc-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-image-captions/image-captions.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-ghcolors.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../release/overview.html" />
+    
+    
+    <link rel="prev" href="../begin/before-you-begin.html" />
+    
+
+    
+        <link rel="shortcut icon" href='../favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='../favicon.ico' type="image/x-icon">
+    
+    
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"repo":"cloudnativeto/sig-istio","types":["star"],"size":"small"};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://cloudnative.to" target="_blank" class="custom-link">回到云原生社区主页</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://wj.qq.com/s2/7309386/b0f5/" target="_blank" class="custom-link">加入 Istio 微信群</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://cloudnative.to/istio.io" target="_blank" class="custom-link">Istio 官网镜像</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://istio.io" target="_blank" class="custom-link">Istio 官网</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    欢迎
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">开始</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../begin/how-istio-got-its-name.html">
+            
+                <a href="../begin/how-istio-got-its-name.html">
+            
+                    
+                        <b>2.1.</b>
+                    
+                    Istio 名称的来历
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../begin/do-you-really-need-istio.html">
+            
+                <a href="../begin/do-you-really-need-istio.html">
+            
+                    
+                        <b>2.2.</b>
+                    
+                    你是否真的需要 Istio？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../begin/before-you-begin.html">
+            
+                <a href="../begin/before-you-begin.html">
+            
+                    
+                        <b>2.3.</b>
+                    
+                    使用 Istio 前的考虑要素
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">社区活动</li>
+        
+        
+    
+        <li class="chapter active" data-level="3.1" data-path="istio-doc-translation.html">
+            
+                <a href="istio-doc-translation.html">
+            
+                    
+                        <b>3.1.</b>
+                    
+                    Istio 官方文档翻译
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Istio 版本追踪</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../release/overview.html">
+            
+                <a href="../release/overview.html">
+            
+                    
+                        <b>4.1.</b>
+                    
+                    概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../release/01.html">
+            
+                <a href="../release/01.html">
+            
+                    
+                        <b>4.2.</b>
+                    
+                    Istio 0.1——开启 Service Mesh 的新纪元
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../release/02.html">
+            
+                <a href="../release/02.html">
+            
+                    
+                        <b>4.3.</b>
+                    
+                    Istio 0.2——开始支持虚拟机
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="../release/03.html">
+            
+                <a href="../release/03.html">
+            
+                    
+                        <b>4.4.</b>
+                    
+                    Istio 0.3——改进发布节奏
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="../release/04.html">
+            
+                <a href="../release/04.html">
+            
+                    
+                        <b>4.5.</b>
+                    
+                    Istio 0.4——新增平台支持
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="../release/05.html">
+            
+                <a href="../release/05.html">
+            
+                    
+                        <b>4.6.</b>
+                    
+                    Istio 0.5——对用户采用更友好
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="../release/06.html">
+            
+                <a href="../release/06.html">
+            
+                    
+                        <b>4.7.</b>
+                    
+                    Istio 0.6——常规更新
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8" data-path="../release/07.html">
+            
+                <a href="../release/07.html">
+            
+                    
+                        <b>4.8.</b>
+                    
+                    Istio 0.7——改进测试质量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.9" data-path="../release/08.html">
+            
+                <a href="../release/08.html">
+            
+                    
+                        <b>4.9.</b>
+                    
+                    Istio 0.8——1.0 的前奏
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.10" data-path="../release/10.html">
+            
+                <a href="../release/10.html">
+            
+                    
+                        <b>4.10.</b>
+                    
+                    Istio 1.0——生产就绪
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.11" data-path="../release/11.html">
+            
+                <a href="../release/11.html">
+            
+                    
+                        <b>4.11.</b>
+                    
+                    Istio 1.1——企业就绪
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.12" data-path="../release/12.html">
+            
+                <a href="../release/12.html">
+            
+                    
+                        <b>4.12.</b>
+                    
+                    Istio 1.2——改进发布机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.13" data-path="../release/13.html">
+            
+                <a href="../release/13.html">
+            
+                    
+                        <b>4.13.</b>
+                    
+                    Istio 1.3——改善用户体验
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.14" data-path="../release/14.html">
+            
+                <a href="../release/14.html">
+            
+                    
+                        <b>4.14.</b>
+                    
+                    Istio 1.4——简化 Istio 的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.15" data-path="../release/15.html">
+            
+                <a href="../release/15.html">
+            
+                    
+                        <b>4.15.</b>
+                    
+                    Istio 1.5——拥抱变化，回归单体
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.16" data-path="../release/16.html">
+            
+                <a href="../release/16.html">
+            
+                    
+                        <b>4.16.</b>
+                    
+                    Istio 1.6——迈向极简主义
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.17" data-path="../release/17.html">
+            
+                <a href="../release/17.html">
+            
+                    
+                        <b>4.17.</b>
+                    
+                    Istio 1.7——进击的追风少年
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.18" data-path="../release/18.html">
+            
+                <a href="../release/18.html">
+            
+                    
+                        <b>4.18.</b>
+                    
+                    Istio 1.8——用户至上的选择
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.19" data-path="../release/19.html">
+            
+                <a href="../release/19.html">
+            
+                    
+                        <b>4.19.</b>
+                    
+                    Istio 1.9——提升 Day2 体验
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.20" data-path="../release/110.html">
+            
+                <a href="../release/110.html">
+            
+                    
+                        <b>4.20.</b>
+                    
+                    Istio 1.10——继续改善 Day2 操作并改版了官网
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Istio 大咖说</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../big-talk/overview.html">
+            
+                <a href="../big-talk/overview.html">
+            
+                    
+                        <b>5.1.</b>
+                    
+                    栏目介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../big-talk/ep01.html">
+            
+                <a href="../big-talk/ep01.html">
+            
+                    
+                        <b>5.2.</b>
+                    
+                    第 1 期：Istio 开源四周年回顾与展望
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="../big-talk/ep02.html">
+            
+                <a href="../big-talk/ep02.html">
+            
+                    
+                        <b>5.3.</b>
+                    
+                    第 2 期：从微服务架构到 Istio——架构升级实践分享
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="../big-talk/ep03.html">
+            
+                <a href="../big-talk/ep03.html">
+            
+                    
+                        <b>5.4.</b>
+                    
+                    第 3 期：如何让 Istio 变得更为高效和智能
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.5" data-path="../big-talk/ep04.html">
+            
+                <a href="../big-talk/ep04.html">
+            
+                    
+                        <b>5.5.</b>
+                    
+                    第 4 期：如何让 Istio 在大规模生产环境落地
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.6" data-path="../big-talk/ep05.html">
+            
+                <a href="../big-talk/ep05.html">
+            
+                    
+                        <b>5.6.</b>
+                    
+                    第 5 期：腾讯云服务网格生产落地最佳实践
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.7" data-path="../big-talk/ep06.html">
+            
+                <a href="../big-talk/ep06.html">
+            
+                    
+                        <b>5.7.</b>
+                    
+                    第 6 期：Envoy Proxy 在线答疑
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Istio 官方文档翻译</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="istio-&#x5B98;&#x65B9;&#x6587;&#x6863;&#x7FFB;&#x8BD1;">Istio &#x5B98;&#x65B9;&#x6587;&#x6863;&#x7FFB;&#x8BD1;</h1>
+<p>&#x5728;&#x6B64;&#x4E4B;&#x524D;&#xFF0C;Istio &#x5B98;&#x65B9;&#x6587;&#x6863;&#x5DF2;&#x7ECF;&#x8FDB;&#x884C;&#x4E86;&#x4E24;&#x8F6E;&#x4E2D;&#x6587;&#x7FFB;&#x8BD1;&#x6D3B;&#x52A8;&#xFF0C;&#x7B2C;&#x4E00;&#x8F6E;&#x662F;&#x5728; 2018 &#x5E74;&#xFF0C;&#x57FA;&#x4E8E; Istio 0.8&#xFF0C;&#x7B2C;&#x4E8C;&#x8F6E;&#x662F;&#x5728; 2020 &#x5E74;&#xFF0C;&#x57FA;&#x4E8E; Istio 1.5&#xFF0C;&#x622A;&#x6B62;&#x76EE;&#x524D; Istio &#x5DF2;&#x53D1;&#x5E03;&#x4E86; 1.9 &#x7248;&#x672C;&#xFF0C;Istio &#x4E2D;&#x6587;&#x6587;&#x6863;&#x5DF2;&#x7ECF;&#x6709;&#x957F;&#x8FBE;&#x4E00;&#x5E74;&#x7684;&#x65F6;&#x95F4;&#x758F;&#x4E8E;&#x7EF4;&#x62A4;&#xFF0C;&#x73B0;&#x5728;&#x4E91;&#x539F;&#x751F;&#x793E;&#x533A; Istio SIG &#x51B3;&#x5B9A;&#x91CD;&#x542F;&#x4E2D;&#x6587;&#x6587;&#x6863;&#x7684;&#x7EF4;&#x62A4;&#x3002;</p>
+<h2 id="&#x5E38;&#x7528;&#x94FE;&#x63A5;">&#x5E38;&#x7528;&#x94FE;&#x63A5;</h2>
+<ul>
+<li>Istio &#x4E2D;&#x6587;&#x6587;&#x6863;&#x5730;&#x5740;&#xFF1A;<a href="https://istio.io/zh" target="_blank">https://istio.io/zh</a></li>
+<li>&#x767B;&#x8BB0;&#x53CA;&#x4EFB;&#x52A1;&#x8BA4;&#x9886;&#x8868;&#xFF1A;<a href="https://docs.google.com/spreadsheets/d/1ihJTww4q1FArD50TerRLyi210LD64gHTIEQM43dBwb0/edit?usp=sharing" target="_blank">Google Spreadsheet</a> </li>
+<li>Istio &#x5B98;&#x7F51; GitHub &#x4ED3;&#x5E93;&#xFF1A;<a href="https://github.com/istio/istio.io" target="_blank">https://github.com/istio/istio.io</a></li>
+<li>&#x52A0;&#x5165;&#x534F;&#x4F5C;&#x5FAE;&#x4FE1;&#x7FA4;&#x7533;&#x8BF7;&#xFF1A;<a href="https://wj.qq.com/s2/7309386/b0f5/" target="_blank">&#x52A0;&#x5165; Istio SIG</a></li>
+</ul>
+<h2 id="&#x8D1F;&#x8D23;&#x4EBA;">&#x8D1F;&#x8D23;&#x4EBA;</h2>
+<p>&#x4E0B;&#x9762;&#x662F;&#x4E91;&#x539F;&#x751F;&#x793E;&#x533A; Istio Doc WG &#x7684;&#x8D1F;&#x8D23;&#x4EBA;&#xFF1A;</p>
+<ul>
+<li><a href="https://github.com/rootsongjc" target="_blank">&#x5B8B;&#x51C0;&#x8D85;&#xFF08;@rootsongjc&#xFF09;</a></li>
+<li><a href="https://github.com/kebe7jun" target="_blank">&#x5218;&#x9F50;&#x5747;&#xFF08;@kebe7jun&#xFF09;</a></li>
+<li><a href="https://github.com/loverto" target="_blank">&#x6BB7;&#x9F99;&#x98DE;&#xFF08;@loverto&#xFF09;</a></li>
+<li><a href="https://github.com/SataQiu" target="_blank">&#x90B1;&#x4E16;&#x8FBE;&#xFF08;@SataQiu&#xFF09;</a></li>
+</ul>
+<p>&#x5728;&#x53C2;&#x4E0E;&#x8FC7;&#x7A0B;&#x4E2D;&#x6709;&#x4EFB;&#x4F55;&#x95EE;&#x9898;&#x53EF;&#x4EE5;&#x4E0E;&#x4ED6;&#x4EEC;&#x8054;&#x7CFB;&#x3002;</p>
+<h2 id="&#x5982;&#x4F55;&#x53C2;&#x4E0E;">&#x5982;&#x4F55;&#x53C2;&#x4E0E;</h2>
+<p>&#x672C;&#x6B21;&#x6D3B;&#x52A8;&#x7531;&#x4E91;&#x539F;&#x751F;&#x793E;&#x533A; Istio Doc WG &#x4E3B;&#x529E;&#xFF0C;&#x53C2;&#x4E0E;&#x6D3B;&#x52A8;&#x9700;&#x8981;&#x4F60;&#x51C6;&#x5907;&#x4EE5;&#x4E0B;&#x5185;&#x5BB9;&#x3002;</p>
+<h3 id="&#x51C6;&#x5907;-github">&#x51C6;&#x5907; GitHub</h3>
+<p>&#x4F60;&#x9700;&#x8981;&#x4E00;&#x4E2A; GitHub &#x8D26;&#x53F7;&#xFF0C;&#x7FFB;&#x8BD1;&#x6587;&#x6863;&#x9700;&#x8981;&#x901A;&#x8FC7; GitHub &#x63D0;&#x4EA4; PR&#xFF0C;&#x9700;&#x8981;&#x4F60;&#x719F;&#x6089; Git &#x547D;&#x4EE4;&#x548C; GitHub &#x7684;&#x57FA;&#x672C;&#x64CD;&#x4F5C;&#xFF1B;</p>
+<h3 id="&#x767B;&#x8BB0;&#x548C;&#x4EFB;&#x52A1;&#x8BA4;&#x9886;">&#x767B;&#x8BB0;&#x548C;&#x4EFB;&#x52A1;&#x8BA4;&#x9886;</h3>
+<p>&#x62A5;&#x540D;&#x53C2;&#x4E0E;&#x548C;&#x8BA4;&#x9886;&#x4EFB;&#x52A1;&#x90FD;&#x5728; <a href="https://docs.google.com/spreadsheets/d/1ihJTww4q1FArD50TerRLyi210LD64gHTIEQM43dBwb0/edit?usp=sharing" target="_blank">Google Spreadsheet</a> &#x4E2D;&#xFF08;<strong>&#x8BF7;&#x52A1;&#x5FC5;&#x5728;&#x8868;&#x683C;&#x4E2D;&#x767B;&#x8BB0;&#x4FE1;&#x606F;</strong>&#xFF09;&#x3002;</p>
+<h3 id="&#x52A0;&#x5165;&#x5FAE;&#x4FE1;&#x7FA4;">&#x52A0;&#x5165;&#x5FAE;&#x4FE1;&#x7FA4;</h3>
+<p>&#x5FAE;&#x4FE1;&#x662F; Istio &#x5B98;&#x65B9;&#x6587;&#x6863;&#x7FFB;&#x8BD1;&#x5DE5;&#x4F5C;&#x7EC4;&#x7684;&#x5373;&#x65F6;&#x901A;&#x8BAF;&#x5DE5;&#x5177;&#xFF0C;&#x5E76;&#x52A0;&#x5165; <strong>CNC Istio Doc WG</strong> &#x5FAE;&#x4FE1;&#x7FA4;&#xFF08;<a href="https://wj.qq.com/s2/7309386/b0f5/" target="_blank">&#x52A0;&#x5165; Istio SIG</a> &#x5373;&#x53EF;&#x52A0;&#x5165;&#xFF09;</p>
+<h2 id="&#x7FFB;&#x8BD1;&#x6D41;&#x7A0B;">&#x7FFB;&#x8BD1;&#x6D41;&#x7A0B;</h2>
+<p>&#x5728;&#x4F60;&#x5B8C;&#x6210;&#x767B;&#x8BB0;&#x548C;&#x8BA4;&#x9886;&#x4EFB;&#x52A1;&#x4E4B;&#x540E;&#x5C31;&#x53EF;&#x4EE5;&#x5F00;&#x59CB;&#x7FFB;&#x8BD1;&#x4E86;&#xFF0C;&#x4E0B;&#x9762;&#x662F;&#x7FFB;&#x8BD1;&#x6D41;&#x7A0B;&#x3002;</p>
+<h3 id="&#x6784;&#x5EFA;&#x672C;&#x5730;&#x73AF;&#x5883;">&#x6784;&#x5EFA;&#x672C;&#x5730;&#x73AF;&#x5883;</h3>
+<p>&#x5728;&#x514B;&#x9686;&#x4E86; <a href="https://github.com/istio/istio.io" target="_blank">Istio &#x6587;&#x6863;&#x7684;&#x4ED3;&#x5E93;</a>&#x540E;&#xFF0C;&#x6709;&#x4E24;&#x79CD;&#x65B9;&#x5F0F;&#x53EF;&#x4EE5;&#x5C06; Istio &#x7684;&#x7F51;&#x7AD9;&#x5728;&#x672C;&#x5730;&#x8FD0;&#x884C;&#x8D77;&#x6765;&#x3002;</p>
+<h4 id="&#x901A;&#x8FC7;&#x672C;&#x5730;&#x8FD0;&#x884C;-hugo-&#x542F;&#x52A8;">&#x901A;&#x8FC7;&#x672C;&#x5730;&#x8FD0;&#x884C; hugo &#x542F;&#x52A8;</h4>
+<p><a href="https://gohugo.io" target="_blank">Hugo</a> &#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E2A;&#x672C;&#x5730;&#x7684; web &#x670D;&#x52A1;&#x5668;&#xFF0C;&#x53EF;&#x4EE5;&#x542F;&#x52A8;&#x7F51;&#x7AD9;&#x3002;&#x5982;&#x679C;&#x60A8;&#x672C;&#x5730;&#x6CA1;&#x6709;&#x5B89;&#x88C5; hugo&#xFF0C;&#x53EF;&#x4EE5;&#x53BB;<a href="https://gohugo.io/getting-started/quick-start/" target="_blank">&#x8FD9;&#x91CC;</a>&#x67E5;&#x770B;&#x5982;&#x4F55;&#x5B89;&#x88C5;&#x3002;</p>
+<p>&#x7136;&#x540E;&#xFF0C;&#x5728; Istio.io &#x4ED3;&#x5E93;&#x7684;<a href="https://github.com/istio/istio.io" target="_blank">&#x6839;&#x76EE;&#x5F55;</a>&#x4E0B;&#xFF0C;&#x8FD0;&#x884C; <code>hugo server</code> &#x5728;&#x672C;&#x5730;&#x542F;&#x52A8; web &#x670D;&#x52A1;&#x5668;&#xFF0C;&#x901A;&#x8FC7; <code>http://localhost:1313/latest/zh</code> &#x8FDB;&#x884C;&#x4E2D;&#x6587;&#x7F51;&#x7AD9;&#x7684;&#x9884;&#x89C8;&#x3002;&#x5982;&#x770B;&#x5230;&#x7C7B;&#x4F3C;&#x4E0B;&#x9762;&#x7684;&#x8F93;&#x51FA;&#xFF0C;&#x5219;&#x8868;&#x793A; web &#x670D;&#x52A1;&#x5668;&#x5DF2;&#x7ECF;&#x542F;&#x52A8;&#x6210;&#x529F;&#xFF1A;</p>
+<pre class="language-"><code>                   | EN  | ZH
++------------------+-----+-----+
+  Pages            | 545 | 545
+  Paginator pages  |   0 |   0
+  Non-page files   | 164 | 164
+  Static files     |  54 |  54
+  Processed images |   0 |   0
+  Aliases          |   1 |   0
+  Sitemaps         |   2 |   1
+  Cleaned          |   0 |   0
+
+Total in 47355 ms
+Watching for changes in /work/{archetypes,assets,content,data,generated,i18n,layouts,static}
+Watching for config changes in /work/config.toml
+Environment: &quot;development&quot;
+Serving pages from memory
+Web Server is available at http://localhost:1313/ (bind address 0.0.0.0)
+Press Ctrl+C to stop
+</code></pre><h4 id="&#x901A;&#x8FC7;-docker-&#x542F;&#x52A8;">&#x901A;&#x8FC7; Docker &#x542F;&#x52A8;</h4>
+<p>&#x53E6;&#x5916;&#x4E00;&#x79CD;&#x662F;&#x76F4;&#x63A5;&#x4F7F;&#x7528; Docker &#x955C;&#x50CF;&#x542F;&#x52A8;&#x3002;</p>
+<p>&#x5728;&#x6B63;&#x786E;&#x5B89;&#x88C5; Docker &#x540E;&#xFF0C;&#x8FD0;&#x884C;&#x4E0B;&#x9762;&#x7684;&#x547D;&#x4EE4;&#x4E0B;&#x8F7D;&#x955C;&#x50CF;&#xFF1A;</p>
+<pre class="language-"><code class="lang-bash">docker pull gcr.io/istio-testing/build-tools:master-2021-04-12T17-40-14
+</code></pre>
+<p>&#x5982;&#x679C;&#x60A8;&#x7684;&#x7F51;&#x7EDC;&#x73AF;&#x5883;&#x65E0;&#x6CD5;&#x8BBF;&#x95EE;&#x6B64;&#x8D44;&#x6E90;&#xFF0C;&#x53EF;&#x4EE5;&#x6267;&#x884C;&#x4E0B;&#x9762;&#x7684;&#x547D;&#x4EE4;&#x4E0B;&#x8F7D;&#x955C;&#x50CF;&#x7684;&#x955C;&#x50CF;&#xFF1A;</p>
+<pre class="language-"><code class="lang-bash">docker pull jimmysong/istio-testing-build-tools:master-2021-04-12T17-40-14
+docker tag jimmysong/istio-testing-build-tools:master-2021-04-12T17-40-14 gcr.io/build-tools:master-2021-04-12T17-40-14
+</code></pre>
+<p>&#x7136;&#x540E;&#x5728; <a href="https://github.com/istio/istio.io" target="_blank">istio.io &#x4ED3;&#x5E93;&#x7684;&#x6839;&#x76EE;&#x5F55;</a>&#x4E0B;&#xFF0C;&#x6267;&#x884C;&#x4E0B;&#x9762;&#x7684;&#x547D;&#x4EE4;&#x542F;&#x52A8; web &#x670D;&#x52A1;&#xFF1A;</p>
+<pre class="language-"><code>make serve
+</code></pre><p>&#x542F;&#x52A8;&#x6210;&#x529F;&#x540E;&#x901A;&#x8FC7; <code>http://localhost:1313/latest/zh</code> &#x8FDB;&#x884C;&#x7F51;&#x7AD9;&#x7684;&#x9884;&#x89C8;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x4F60;&#x60F3;&#x901A;&#x8FC7;&#x5C40;&#x57DF;&#x7F51;&#x8BBF;&#x95EE;&#x8BE5;&#x9875;&#x9762;&#xFF0C;&#x53EF;&#x4EE5;&#x5C06; <code>Makefile.core.mk</code> &#x6587;&#x4EF6;&#x4E2D;&#x7684; <code>ISTIO_SERVE_DOMAIN ?= localhost</code> &#x4FEE;&#x6539;&#x4E3A; <code>ISTIO_SERVE_DOMAIN ?= &#x5C40;&#x57DF;&#x7F51; IP</code>&#xFF0C;&#x7136;&#x540E;&#x518D;&#x542F;&#x52A8; web &#x670D;&#x52A1;&#xFF1A;</p>
+<pre class="language-"><code>make serve
+</code></pre><p>&#x8FD9;&#x53EF;&#x4EE5;&#x8BA9;&#x5C40;&#x57DF;&#x7F51;&#x4E2D;&#x7684;&#x5176;&#x5B83;&#x8BA1;&#x7B97;&#x673A;&#x8BBF;&#x95EE;&#x8BE5;&#x9875;&#x9762;&#xFF08;&#x4EE5;&#x53CA;&#x7269;&#x7406;&#x673A;&#x8BBF;&#x95EE;&#x865A;&#x62DF;&#x673A;&#xFF09;&#xFF0C;&#x6CE8;&#x610F;&#xFF1A;&#x4E0D;&#x8981;&#x5C06;&#x8BE5;&#x6587;&#x4EF6;&#x7684;&#x6539;&#x52A8;&#x63D0;&#x4EA4;&#x81F3; PR&#x3002;</p>
+<p>&#x542F;&#x52A8;&#x6210;&#x529F;&#x540E;&#x901A;&#x8FC7; <code>http://&#x5C40;&#x57DF;&#x7F51; IP:1313/latest/zh</code> &#x8FDB;&#x884C;&#x7F51;&#x7AD9;&#x7684;&#x9884;&#x89C8;&#x3002;</p>
+<h3 id="&#x63D0;&#x4EA4;-pr">&#x63D0;&#x4EA4; PR</h3>
+<p>&#x5982;&#x679C;&#x68C0;&#x67E5;&#x901A;&#x8FC7;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x5411; <a href="https://github.com/istio/istio.github.io/pulls" target="_blank">Istio &#x5B98;&#x65B9;&#x7F51;&#x7AD9;&#x63D0;&#x4EA4; PR</a>&#xFF0C;PR &#x88AB;&#x5408;&#x5E76;&#x540E;&#x5C31;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; <a href="https://preliminary.istio.io/zh/" target="_blank">Istio &#x7F51;&#x7AD9;&#x9884;&#x89C8;&#x9875;&#x9762;</a>&#x770B;&#x5230;&#x88AB;&#x5408;&#x5E76;&#x540E;&#x7684;&#x9875;&#x9762;&#x3002;&#x4E3A;&#x65B9;&#x4FBF;&#x7BA1;&#x7406;&#x548C;&#x8FA8;&#x8BC6;&#xFF0C;&#x8BF7;&#x9075;&#x5B88;&#x4E0B;&#x9762;&#x7684;&#x6A21;&#x677F;&#x5B9A;&#x4E49;&#x60A8;&#x7684; PR&#xFF1A;</p>
+<pre class="language-"><code>&#x6807;&#x9898;&#xFF1A;
+zh-translation:<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>file_full_path</span><span class="token punctuation">&gt;</span></span>
+&#x5185;&#x5BB9;&#xFF1A;
+ref: https://github.com/servicemesher/istio-official-translation/issues/<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>issueID</span><span class="token punctuation">&gt;</span></span>
+[ ] Configuration Infrastructure
+[x] Docs
+[ ] Installation
+[ ] Networking
+[ ] Performance and Scalability
+[ ] Policies and Telemetry
+[ ] Security
+[ ] Test and Release
+[ ] User Experience
+[ ] Developer Infrastructure
+</code></pre><p>&#x5176;&#x4E2D;&#xFF0C;&#x6807;&#x9898;&#x4E2D;&#x7684; <file_full_path> &#x662F;&#x7FFB;&#x8BD1;&#x7684;&#x6E90;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#xFF1B;&#x5185;&#x5BB9;&#x4E2D;&#x7684; ref &#x662F;&#x5F53;&#x524D;&#x7FFB;&#x8BD1;&#x4EFB;&#x52A1;&#x7684; issue &#x94FE;&#x63A5;&#x3002;</file_full_path></p>
+<h3 id="&#x6821;&#x5BF9;">&#x6821;&#x5BF9;</h3>
+<p>&#x6821;&#x5BF9;&#x5DE5;&#x4F5C;&#x7531;&#x6CA1;&#x6709;&#x7FFB;&#x8BD1;&#x8FC7;&#x5F53;&#x524D;&#x6587;&#x6863;&#x7684;&#x5176;&#x4ED6;&#x7FFB;&#x8BD1;&#x4EBA;&#x5458;&#x6267;&#x884C;&#xFF0C;&#x5373;&#x7FFB;&#x8BD1;&#x4EBA;&#x5458;&#x4E92;&#x4E3A;&#x6821;&#x5BF9;&#x4EBA;&#x5458;&#x3002;&#x4E3A;&#x4FDD;&#x8BC1;&#x8D28;&#x91CF;&#xFF0C;&#x6211;&#x4EEC;&#x8BBE;&#x7F6E;&#x4E86;&#x4E24;&#x8F6E; Review&#xFF1A;</p>
+<p>&#x6240;&#x6709;&#x7FFB;&#x8BD1;&#x4EBA;&#x5458;&#x4E92;&#x4E3A;&#x6821;&#x5BF9;&#x4EBA;&#x5458;&#xFF0C;&#x5206;&#x914D;&#x4E00;&#x4E2A;&#x7FFB;&#x8BD1;&#x4EFB;&#x52A1;&#x540C;&#x65F6;&#x8981;&#x786E;&#x5B9A;&#x6821;&#x5BF9;&#x4EFB;&#x52A1;&#xFF1B;</p>
+<ul>
+<li>&#x521D;&#x5BA1;&#xFF1A;&#x8D1F;&#x8D23;&#x5BF9;&#x7FFB;&#x8BD1;&#x7684;&#x5185;&#x5BB9;&#x548C;&#x539F;&#x6587;&#x8F83;&#x4E3A;&#x7CBE;&#x7EC6;&#x7684;&#x8FDB;&#x884C;&#x5BF9;&#x6BD4;&#xFF0C;&#x4FDD;&#x8BC1;&#x8BED;&#x53E5;&#x901A;&#x987A;&#xFF0C;&#x65E0;&#x660E;&#x663E;&#x7FFB;&#x8BD1;&#x9519;&#x8BEF;&#xFF1B;</li>
+<li>&#x7EC8;&#x5BA1;&#xFF1A;&#x8D1F;&#x8D23;&#x5BF9;&#x7FFB;&#x8BD1;&#x7684;&#x6587;&#x6863;&#x505A;&#x6982;&#x8981;&#x6027;&#x7684;&#x68C0;&#x67E5;&#xFF0C;&#x805A;&#x7126;&#x5728;&#x884C;&#x6587;&#x7684;&#x901A;&#x987A;&#x6027;&#x3001;&#x4E00;&#x81F4;&#x6027;&#x3001;&#x7B26;&#x5408;&#x4E2D;&#x6587;&#x8BED;&#x8A00;&#x4E60;&#x60EF;&#xFF0C;&#x8BCD;&#x6C47;&#x3001;&#x672F;&#x8BED;&#x51C6;&#x786E;&#x3002;&#x7EC8;&#x5BA1;&#x901A;&#x8FC7;&#x540E;&#x7531;&#x7BA1;&#x7406;&#x5458; approve &#x5F53;&#x524D; PR&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x5408;&#x5E76;&#x4E86;&#x3002;</li>
+</ul>
+<h4 id="review-&#x7684;&#x57FA;&#x672C;&#x6D41;&#x7A0B;">Review &#x7684;&#x57FA;&#x672C;&#x6D41;&#x7A0B;</h4>
+<p><strong>&#x8BA4;&#x9886; Review</strong></p>
+<ul>
+<li>&#x65B0;&#x63D0;&#x4EA4;&#x7684; PR &#x6BCF;&#x5929;&#x4F1A;&#x5728;&#x534F;&#x4F5C;&#x7FA4;&#x53D1;&#x5E03;&#xFF0C;&#x4F9B;&#x5927;&#x5BB6;&#x8BA4;&#x9886;&#xFF1B;</li>
+<li>&#x8FDB;&#x5165;&#x8981;&#x8BA4;&#x9886;&#x7684; PR&#xFF0C;&#x56DE;&#x590D; /review&#xFF0C;&#x5E76;&#x5728; <a href="https://docs.google.com/spreadsheets/d/1ihJTww4q1FArD50TerRLyi210LD64gHTIEQM43dBwb0/edit?usp=sharing" target="_blank">Google Spreadsheet</a> &#x5BF9;&#x5E94;&#x7684;&#x4EFB;&#x52A1;&#x4E2D;&#x767B;&#x8BB0; reviewer&#xFF1B;</li>
+</ul>
+<p><strong>Review &#x91CD;&#x70B9;</strong></p>
+<ul>
+<li>&#x6253;&#x5F00; PR &#x63D0;&#x4EA4;&#x7684;&#x4E2D;&#x6587;&#x7FFB;&#x8BD1;&#xFF0C;&#x5E76;&#x627E;&#x5230;&#x5BF9;&#x5E94; issue &#x4E2D;&#x6307;&#x5B9A;&#x7684;&#x6E90;&#x6587;&#x4EF6;&#xFF0C;&#x9010;&#x6BB5;&#x8FDB;&#x884C;&#x8D70;&#x67E5;&#xFF1B;</li>
+<li>&#x8BCD;&#x6C47;&#x68C0;&#x67E5;&#xFF1A;&#x68C0;&#x67E5;&#x8BD1;&#x6587;&#x4E2D;&#x51FA;&#x73B0;&#x7684;&#x672F;&#x8BED;&#x3001;&#x5E38;&#x7528;&#x8BCD;&#x6C47;&#x662F;&#x5426;&#x9075;&#x7167;&#x4E86;&#x672F;&#x8BED;&#x8868;&#x7684;&#x8981;&#x6C42;&#x8FDB;&#x884C;&#x7FFB;&#x8BD1;&#xFF1B;</li>
+<li>&#x683C;&#x5F0F;&#x68C0;&#x67E5;&#xFF1A;&#x5BF9;&#x7167;&#x539F;&#x6587;&#xFF0C;&#x68C0;&#x67E5;&#x8BD1;&#x6587;&#x4E2D;&#x7684;&#x6807;&#x9898;&#x548C;&#x5C42;&#x6B21;&#x662F;&#x5426;&#x5BF9;&#x5E94;&#xFF1B;&#x4EE3;&#x7801;&#x5757;&#x662F;&#x5426;&#x6307;&#x5B9A;&#x4E86;&#x8BED;&#x8A00;&#xFF1B;&#x6807;&#x70B9;&#x7B26;&#x53F7;&#x662F;&#x5426;&#x6B63;&#x786E;&#x4E14;&#x65E0;&#x82F1;&#x6587;&#x6807;&#x70B9;&#xFF1B;&#x8D85;&#x94FE;&#x63A5;&#x3001;&#x56FE;&#x7247;&#x94FE;&#x63A5;&#x662F;&#x5426;&#x53EF;&#x8FBE;&#xFF1B;&#x662F;&#x5426;&#x6709;&#x9519;&#x522B;&#x5B57;&#xFF1B;</li>
+<li>&#x8BED;&#x53E5;&#x68C0;&#x67E5;&#xFF1A;&#x5206;&#x6BB5;&#x843D;&#x901A;&#x8BFB;&#x4E00;&#x904D;&#xFF0C;&#x68C0;&#x67E5;&#x662F;&#x5426;&#x6709;&#x4E0D;&#x901A;&#x987A;&#x3001;&#x8BED;&#x75C5;&#x3001;&#x6216;&#x8005;&#x4E0D;&#x7B26;&#x5408;&#x4E2D;&#x6587;&#x4E60;&#x60EF;&#x7684;&#x8BD1;&#x6587;&#xFF08;&#x5570;&#x55E6;&#x3001;&#x91CD;&#x590D;&#x3001;&#x8FC7;&#x591A;&#x7684;&#x52A9;&#x8BCD;&#x7B49;&#xFF09;</li>
+<li>&#x63D0;&#x4EA4; comment&#xFF1A;&#x6839;&#x636E;&#x53D1;&#x73B0;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x5728; PR &#x63D0;&#x4EA4;&#x6587;&#x4EF6;&#x7684;&#x5BF9;&#x5E94;&#x884C;&#x6DFB;&#x52A0; comment&#xFF0C;&#x683C;&#x5F0F;&#x4E3A;<code>&#x539F;&#x8BD1;&#x6587;=&gt;&#x4FEE;&#x6539;&#x540E;&#x8BD1;&#x6587;</code>&#xFF1B;&#x4E0D;&#x786E;&#x5B9A;&#x7684;&#x5730;&#x65B9;&#x53EF;&#x52A0;&#x5EFA;&#x8BAE;&#x6216;&#x8BE2;&#x95EE;&#xFF0C;&#x6216;&#x53D1;&#x5230;&#x534F;&#x4F5C;&#x7FA4;&#x6C42;&#x52A9;&#x3002;</li>
+</ul>
+<h3 id="&#x66F4;&#x65B0;&#x4EFB;&#x52A1;&#x8868;">&#x66F4;&#x65B0;&#x4EFB;&#x52A1;&#x8868;</h3>
+<p>&#x901A;&#x8FC7;&#x7EC8;&#x5BA1;&#x540E;&#x7684;&#x4EFB;&#x52A1;&#x4F1A;&#x88AB;&#x8D1F;&#x8D23;&#x4EBA; approve&#xFF0C;&#x5E76;&#x5408;&#x5E76;&#x5230; Istio &#x7684;&#x5B98;&#x65B9;&#x4ED3;&#x5E93;&#x4E2D;&#x3002;&#x9700;&#x8981;&#x60A8;&#x5728; <a href="https://docs.google.com/spreadsheets/d/1ihJTww4q1FArD50TerRLyi210LD64gHTIEQM43dBwb0/edit?usp=sharing" target="_blank">Google Spreadsheet</a> &#x7684;&#x4EFB;&#x52A1;&#x5217;&#x8868;&#x4E2D;&#x66F4;&#x65B0;&#x6240;&#x8BA4;&#x9886;&#x7684;&#x4EFB;&#x52A1;&#x7684;&#x72B6;&#x6001;&#x3002;&#x6574;&#x4E2A;&#x7FFB;&#x8BD1;&#x4EFB;&#x52A1;&#x5C31;&#x7B97;&#x6B63;&#x5F0F;&#x5B8C;&#x6210;&#x4E86;&#x3002;&#x60A8;&#x53EF;&#x4EE5;&#x7EE7;&#x7EED;&#x9886;&#x53D6;&#x65B0;&#x7684;&#x4EFB;&#x52A1;&#x8FDB;&#x884C;&#x7FFB;&#x8BD1;&#xFF0C;&#x6216;&#x53C2;&#x4E0E;&#x6821;&#x5BF9;&#x5DE5;&#x4F5C;&#x3002;</p>
+<h2 id="faq">FAQ</h2>
+<h4 id="&#x521D;&#x6B21;&#x4F7F;&#x7528;-hugo-&#x542F;&#x52A8;&#x627E;&#x4E0D;&#x5230;&#x9759;&#x6001;&#x8D44;&#x6E90;&#x95EE;&#x9898;">&#x521D;&#x6B21;&#x4F7F;&#x7528; hugo &#x542F;&#x52A8;&#x627E;&#x4E0D;&#x5230;&#x9759;&#x6001;&#x8D44;&#x6E90;&#x95EE;&#x9898;</h4>
+<p>&#x521D;&#x6B21;&#x4F7F;&#x7528; <code>hugo server</code> &#x5728;&#x672C;&#x5730;&#x542F;&#x52A8; web &#x670D;&#x52A1;&#xFF0C;web &#x9875;&#x9762;&#x4F1A;&#x51FA;&#x73B0;&#x5982;&#x4E0B;&#x95EE;&#x9898;&#xFF0C;&#x627E;&#x4E0D;&#x5230;&#x9759;&#x6001;&#x8D44;&#x6E90;&#x3002;</p>
+<pre class="language-"><code>Failed to load resource: the server responded with a status of 404 (Not Found)
+Refused to apply style from &apos;http://localhost:1313/css/all.css&apos; because its MIME type (&apos;text/plain&apos;) is not a supported stylesheet MIME type, and strict MIME checking is enabled.
+</code></pre><blockquote>
+<p>&#x89E3;&#x51B3;&#x65B9;&#x6CD5;&#xFF1A;</p>
+</blockquote>
+<ol>
+<li>&#x5728;&#x9879;&#x76EE;&#x6839;&#x76EE;&#x5F55;&#x4E0B;&#x6267;&#x884C; <code>sh scripts/build_site.sh</code> &#x547D;&#x4EE4;&#xFF0C;&#x5373;&#x53EF;&#x751F;&#x6210;&#x6240;&#x9700;&#x9759;&#x6001;&#x6587;&#x4EF6;&#x3002;&#x4F46;&#x662F;&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#x9700;&#x8981;&#x5B89;&#x88C5;&#x6BD4;&#x8F83;&#x591A; <code>node</code> &#x7684;&#x547D;&#x4EE4;&#x884C;&#x5DE5;&#x5177;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;<code>sass</code>&#x3001;<code>tsc</code>&#x3001;<code>babel</code>&#x3001;<code>svgstore</code>&#xFF0C;&#x5B89;&#x88C5;&#x8D77;&#x6765;&#x6BD4;&#x8F83;&#x7E41;&#x7410;&#x3002;</li>
+<li>&#x8FD9;&#x91CC;&#x5EFA;&#x8BAE;&#x9996;&#x6B21;&#x53EF;&#x4EE5;&#x91C7;&#x7528; <code>docker</code> &#x65B9;&#x5F0F;&#x542F;&#x52A8;&#xFF0C;&#x53C2;&#x8003; docker &#x542F;&#x52A8;&#x6559;&#x7A0B;&#xFF0C;&#x5728; Istio <a href="https://github.com/istio/istio.io" target="_blank">&#x7F51;&#x7AD9;&#x4ED3;&#x5E93;&#x7684;&#x6839;&#x76EE;&#x5F55;</a>&#x8FD0;&#x884C; <code>make serve</code> &#x542F;&#x52A8;&#xFF0C;&#x5982;&#x679C;&#x60A8;&#x7684;&#x7F51;&#x7EDC;&#x73AF;&#x5883;&#x65E0;&#x6CD5;&#x8BBF;&#x95EE;&#x6B64;&#x8D44;&#x6E90;&#xFF0C;&#x8BF7;&#x4F7F;&#x7528; <code>make serve IMG=jimmysong/istio-testing-build-tools:master-2021-03-01T22-30-49</code> &#x547D;&#x4EE4;&#xFF0C;&#x542F;&#x52A8;&#x65F6; docker &#x955C;&#x50CF;&#x4F1A;&#x5728;&#x9879;&#x76EE;&#x76EE;&#x5F55;&#x4E2D;&#x751F;&#x6210; <code>generated</code>&#x3001;<code>tmp</code> &#x548C; <code>resources</code> &#x9759;&#x6001;&#x8D44;&#x6E90;&#x76EE;&#x5F55;&#x3002;</li>
+<li>&#x5728;&#x521D;&#x6B21;&#x751F;&#x6210;&#x9759;&#x6001;&#x8D44;&#x6E90;&#x76EE;&#x5F55;&#x540E;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x6B63;&#x5E38;&#x4F7F;&#x7528; <code>hugo server</code> &#x6765;&#x542F;&#x52A8;&#x9879;&#x76EE;&#x4E86;&#x3002;</li>
+</ol>
+<h4 id="&#x5B9A;&#x4E49;&#x7684;&#x951A;&#x70B9;&#x62A5;&#x62FC;&#x5199;&#x9519;&#x8BEF;">&#x5B9A;&#x4E49;&#x7684;&#x951A;&#x70B9;&#x62A5;&#x62FC;&#x5199;&#x9519;&#x8BEF;</h4>
+<p>&#x7ED9;&#x6807;&#x9898;&#x6DFB;&#x52A0;&#x7684;&#x951A;&#x70B9;&#x5B8C;&#x5168;&#x548C;&#x5B98;&#x65B9;&#x82F1;&#x6587;&#x7684;&#x4E00;&#x81F4;&#xFF0C;&#x62A5;&#x7C7B;&#x4F3C;&#x5982;&#x4E0B;&#x9519;&#x8BEF;&#xFF1A;</p>
+<figure id="fig3.1.1"><a href="https://tva1.sinaimg.cn/large/e6c9d24ely1go5rvst4d0j21he0p8tec.jpg" data-lightbox="01916865-ba55-4849-b49e-2ad4dfabab04" data-title="&#x9519;&#x8BEF;&#x622A;&#x56FE;" target="_blank"><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1go5rvst4d0j21he0p8tec.jpg" alt="&#x9519;&#x8BEF;&#x622A;&#x56FE;"></a><figcaption>&#x9519;&#x8BEF;&#x622A;&#x56FE;</figcaption></figure>
+<p>&#x4E3B;&#x8981;&#x7684;&#x539F;&#x56E0;&#x662F;&#x5728;&#x5BF9;&#x4E8E;&#x8FD9;&#x4E9B;&#x4E13;&#x6709;&#x540D;&#x8BCD;&#x5728;<code>.spelling</code> &#x6587;&#x4EF6;&#x4E2D;&#x53EA;&#x5B9A;&#x4E49;&#x4E86;&#x5927;&#x5199;&#x800C;&#x6CA1;&#x6709;&#x5B9A;&#x4E49;&#x5C0F;&#x5199;&#x5BFC;&#x81F4;&#x3002;&#x6B64;&#x65F6;&#xFF0C;&#x8BF7;&#x53C2;&#x8003;&#x4E0A;&#x6587;&#x951A;&#x70B9;&#x89C4;&#x8303;&#x4E66;&#x5199;&#x951A;&#x70B9;&#x3002;</p>
+<h4 id="ci-deploynetlify-&#x62A5;&#x9519;">CI deploy/netlify &#x62A5;&#x9519;</h4>
+<p>&#x672C;&#x5730; make serve &#x6CA1;&#x95EE;&#x9898;&#xFF0C;&#x4F46;&#x5B98;&#x65B9;&#x7684; deploy/netlify &#x62A5;&#x5982;&#x4E0B;&#x9519;&#x8BEF;&#xFF1A;</p>
+<pre class="language-"><code>10:07:37 AM: added 35 packages from 9 contributors and audited 43 packages in 1.553s
+10:07:37 AM: found 0 vulnerabilities
+10:07:41 AM: TypeError: Cannot set property inList of [object Object] which has only a getter
+10:07:41 AM:     at PluginPass.exit (/opt/build/repo/node_modules/babel-plugin-minify-simplify/lib/index.js:549:40)
+10:07:41 AM:     at newFn (/opt/buildhome/.nvm/versions/node/v12.8.0/lib/node_modules/@babel/core/node_modules/@babel/traverse/lib/visitors.js:179:21)
+10:07:41 AM:     at NodePath._call (/opt/buildhome/.nvm/versions/node/v12.8.0/lib/node_modules/@babel/core/node_modules/@babel/traverse/lib/path/context.js:55:20)
+10:07:41 AM:     at NodePath.call (/opt/buildhome/.nvm/versions/node/v12.8.0/lib/node_modules/@babel/core/node_modules/@babel/traverse/lib/path/context.js:42:17)
+10:07:41 AM:     at NodePath.visit (/opt/buildhome/.nvm/versions/node/v12.8.0/lib/node_modules/@babel/core/node_modules/@babel/traverse/lib/path/context.js:99:8)
+10:07:41 AM:     at TraversalContext.visitQueue (/opt/buildhome/.nvm/versions/node/v12.8.0/lib/node_modules/@babel/core/node_modules/@babel/traverse/lib/context.js:112:16)
+10:07:41 AM:     at TraversalContext.visitSingle (/opt/buildhome/.nvm/versions/node/v12.8.0/lib/node_modules/@babel/core/node_modules/@babel/traverse/lib/context.js:84:19)
+10:07:41 AM:     at TraversalContext.visit (/opt/buildhome/.nvm/versions/node/v12.8.0/lib/node_modules/@babel/core/node_modules/@babel/traverse/lib/context.js:140:19)
+10:07:41 AM:     at Function.traverse.node (/opt/buildhome/.nvm/versions/node/v12.8.0/lib/node_modules/@babel/core/node_modules/@babel/traverse/lib/index.js:84:17)
+10:07:41 AM:     at NodePath.visit (/opt/buildhome/.nvm/versions/node/v12.8.0/lib/node_modules/@babel/core/node_modules/@babel/traverse/lib/path/context.js:97:18)
+10:07:41 AM: Makefile.core.mk:49: recipe for target &apos;netlify&apos; failed
+10:07:41 AM: make: *** [netlify] Error 1
+</code></pre><p>&#x8FD9;&#x662F;&#x5B98;&#x65B9;&#x7684;&#x4E00;&#x4E2A; <a href="https://github.com/istio/istio.io/pull/5379" target="_blank">bug</a>&#xFF0C;&#x5DF2;&#x7ECF;&#x89E3;&#x51B3;&#x3002;</p>
+<h4 id="cla-&#x68C0;&#x6D4B;&#x4E0D;&#x901A;&#x8FC7;">CLA &#x68C0;&#x6D4B;&#x4E0D;&#x901A;&#x8FC7;</h4>
+<p>&#x5982;&#x679C;&#x4F60;&#x5728;&#x8BBE;&#x7F6E; cla &#x4E4B;&#x524D;&#x63D0;&#x4EA4;&#x4E86; PR&#xFF0C;CI &#x91CC;&#x7684; cla check &#x4F1A;&#x5931;&#x8D25;&#x3002;&#x53EF;&#x4EE5;&#x5148;&#x5728; PR &#x4E2D;&#x56DE;&#x590D; <code>@googlebot I signed it.</code>&#x3002;&#x5982;&#x679C;&#x8FD8;&#x5931;&#x8D25;&#x5C1D;&#x8BD5;&#x56DE;&#x590D; <code>@googlebot I fixed it.</code>&#x3002;&#x5982;&#x679C;&#x8FD8;&#x4E0D;&#x884C;&#xFF0C;&#x6240;&#x4EE5;&#x6700;&#x597D;&#x7684;&#x529E;&#x6CD5;&#x662F;&#x5173;&#x95ED;&#x5F53;&#x524D; PR&#xFF0C;&#x91CD;&#x65B0;&#x7528;&#x4E00;&#x4E2A;&#x65B0;&#x7684; branch &#x62F7;&#x8D1D;&#x76F8;&#x5E94;&#x6587;&#x4EF6;&#xFF0C;&#x518D;&#x63D0;&#x4EA4;&#x5168;&#x65B0;&#x7684; PR &#x5373;&#x53EF;&#x3002;</p>
+<h4 id="error-unexpected-end-tag--p">ERROR: Unexpected end tag : p</h4>
+<p>&#x5982;&#x679C;&#x9047;&#x5230;&#x6B64;&#x9519;&#x8BEF;&#xFF0C;&#x8BF4;&#x660E;&#x8FD8;&#x6CA1;&#x6709;&#x5B8C;&#x5168;&#x4FEE;&#x590D; markdown &#x7684; lint &#x95EE;&#x9898;&#x3002;&#x9700;&#x8981;&#x5148;&#x4FEE;&#x590D;&#x5B8C;&#x5373;&#x53EF;&#x901A;&#x8FC7; CI &#x68C0;&#x67E5;&#x3002; </p>
+<footer class="page-footer"><span class="copyright">&#x672C;&#x7AD9;&#x57FA;&#x4E8E; <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">CC 4.0 &#x534F;&#x8BAE;</a> &#x53D1;&#x5E03; | <a href="https://cloudnative.to" target="_blank"> &#x4E91;&#x539F;&#x751F;&#x793E;&#x533A;</a> all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification"> Updated at 
+2021-08-16 09:14:52
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../begin/before-you-begin.html" class="navigation navigation-prev " aria-label="Previous page: 使用 Istio 前的考虑要素">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../release/overview.html" class="navigation navigation-next " aria-label="Next page: 概述">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Istio 官方文档翻译","level":"3.1","depth":1,"next":{"title":"概述","level":"4.1","depth":1,"path":"release/overview.md","ref":"release/overview.md","articles":[]},"previous":{"title":"使用 Istio 前的考虑要素","level":"2.3","depth":1,"path":"begin/before-you-begin.md","ref":"begin/before-you-begin.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","codesnippet","splitter","page-toc-button","image-captions","editlink","back-to-top-button","-lunr","-search","search-plus","github-buttons@2.1.0","favicon@^0.0.2","tbfed-pagefooter@^0.0.1","3-ba","theme-default","-highlight","prism","prism-themes","lightbox","ga","sitemap-general"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"本站基于 <a href=https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh>CC 4.0 协议</a> 发布 | <a href=https://cloudnative.to> 云原生社区</a>","modify_label":" Updated at ","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prism-themes/themes/prism-ghcolors.css"]},"github":{"url":"https://github.com/cloudnativeto/sig-istio/"},"editlink":{"label":"编辑本页","multilingual":false,"base":"https://github.com/cloudnativeto/sig-istio/blob/main/"},"splitter":{},"codesnippet":{},"sitemap-general":{"prefix":"https://cloudnative.to/sig-istio/"},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":{"shortcut":"favicon.ico","bookmark":"favicon.ico"},"lightbox":{"jquery":true,"sameUuid":false},"page-toc-button":{},"back-to-top-button":{},"prism-themes":{},"github-buttons":{"repo":"cloudnativeto/sig-istio","types":["star"],"size":"small"},"3-ba":{"configuration":"auto","token":"f3dc895ea3bd6186cd835841d365c103"},"ga":{"configuration":"auto","token":"UA-93485976-4"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"showLevel":true,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}},"search-plus":{},"image-captions":{"caption":"_CAPTION_","variable_name":"_pictures"}},"theme":"default","author":"云原生社区","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"_pictures":[{"backlink":"event/istio-doc-translation.html#fig3.1.1","level":"3.1","list_caption":"Figure: 错误截图","alt":"错误截图","nro":1,"url":"https://tva1.sinaimg.cn/large/e6c9d24ely1go5rvst4d0j21he0p8tec.jpg","index":1,"caption_template":"_CAPTION_","label":"错误截图","attributes":{},"skip":false,"key":"3.1.1"},{"backlink":"release/16.html#fig4.16.1","level":"4.16","list_caption":"Figure: 图片引自鸟山明漫画《龙珠Z》","alt":"图片引自鸟山明漫画《龙珠Z》","nro":2,"url":"../images/007S8ZIlly1gf88vqhcgij307e08w0v2.jpg","index":1,"caption_template":"_CAPTION_","label":"图片引自鸟山明漫画《龙珠Z》","attributes":{},"skip":false,"key":"4.16.1"},{"backlink":"release/16.html#fig4.16.2","level":"4.16","list_caption":"Figure: 图片引自几米漫画《向左走向右走》","alt":"图片引自几米漫画《向左走向右走》","nro":3,"url":"../images/007S8ZIlly1gf88kaci9ij31ha0lmgrm.jpg","index":2,"caption_template":"_CAPTION_","label":"图片引自几米漫画《向左走向右走》","attributes":{},"skip":false,"key":"4.16.2"},{"backlink":"release/16.html#fig4.16.3","level":"4.16","list_caption":"Figure: appmesh","alt":"appmesh","nro":4,"url":"../images/007S8ZIlly1gf804aiie4j30oz0dntaj.jpg","index":3,"caption_template":"_CAPTION_","label":"appmesh","attributes":{},"skip":false,"key":"4.16.3"},{"backlink":"release/16.html#fig4.16.4","level":"4.16","list_caption":"Figure: portal","alt":"portal","nro":5,"url":"../images/007S8ZIlly1gf86rih40pj31560fsdl5.jpg","index":4,"caption_template":"_CAPTION_","label":"portal","attributes":{},"skip":false,"key":"4.16.4"},{"backlink":"release/16.html#fig4.16.5","level":"4.16","list_caption":"Figure: infoq","alt":"infoq","nro":6,"url":"../images/007S8ZIlly1gf87rq8kvfj31ec0ow777.jpg","index":5,"caption_template":"_CAPTION_","label":"infoq","attributes":{},"skip":false,"key":"4.16.5"},{"backlink":"release/19.html#fig4.19.1","level":"4.19","list_caption":"Figure: 资源关系","alt":"资源关系","nro":7,"url":"../images/e6c9d24ely1go6huild3ej20w00fs3yo.jpg","index":1,"caption_template":"_CAPTION_","label":"资源关系","attributes":{},"skip":false,"key":"4.19.1"},{"backlink":"big-talk/ep01.html#fig5.2.1","level":"5.2","list_caption":"Figure: B 站海报-第1期","alt":"B 站海报-第1期","nro":8,"url":"ep01.jpg","index":1,"caption_template":"_CAPTION_","label":"B 站海报-第1期","attributes":{},"skip":false,"key":"5.2.1"},{"backlink":"big-talk/ep02.html#fig5.3.1","level":"5.3","list_caption":"Figure: Istio 大咖说 第二期","alt":"Istio 大咖说 第二期","nro":9,"url":"ep02.jpg","index":1,"caption_template":"_CAPTION_","label":"Istio 大咖说 第二期","attributes":{},"skip":false,"key":"5.3.1"},{"backlink":"big-talk/ep03.html#fig5.4.1","level":"5.4","list_caption":"Figure: Istio 大咖说 第三期","alt":"Istio 大咖说 第三期","nro":10,"url":"ep03.jpg","index":1,"caption_template":"_CAPTION_","label":"Istio 大咖说 第三期","attributes":{},"skip":false,"key":"5.4.1"},{"backlink":"big-talk/ep04.html#fig5.5.1","level":"5.5","list_caption":"Figure: Istio 大咖说第四期-陈鹏","alt":"Istio 大咖说第四期-陈鹏","nro":11,"url":"ep04.jpg","index":1,"caption_template":"_CAPTION_","label":"Istio 大咖说第四期-陈鹏","attributes":{},"skip":false,"key":"5.5.1"},{"backlink":"big-talk/ep05.html#fig5.6.1","level":"5.6","list_caption":"Figure: Istio 大咖说第五期","alt":"Istio 大咖说第五期","nro":12,"url":"ep05.jpg","index":1,"caption_template":"_CAPTION_","label":"Istio 大咖说第五期","attributes":{},"skip":false,"key":"5.6.1"}]},"title":"云原生社区 Istio SIG","language":"zh-hans","links":{"sidebar":{"回到云原生社区主页":"https://cloudnative.to","加入 Istio 微信群":"https://wj.qq.com/s2/7309386/b0f5/","Istio 官网镜像":"https://cloudnative.to/istio.io","Istio 官网":"https://istio.io"}},"gitbook":"*","description":""},"file":{"path":"event/istio-doc-translation.md","mtime":"2021-08-16T09:14:52.591Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-08-16T09:15:20.923Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-page-toc-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-editlink/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-3-ba/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
